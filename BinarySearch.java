@@ -1,4 +1,4 @@
-package com.company;
+package algorithms;
 
 import java.util.Scanner;
 
@@ -12,14 +12,14 @@ public class BinarySearch {
         int[] arr = arrayInput(size);
         System.out.println("Enter the value of target element");
         int target = sc.nextInt();
-
+        sc.close();
         int answer = binarySearch(arr, target);
 
         System.out.println("Element " + target + " is found at index " + answer);
 
         int recursive_answer = binarySearchRecursive(arr, target, 0, arr.length - 1);
 
-        System.out.println("Element " + target + " is found at index " + answer + " by using recursive method");
+        System.out.println("Element " + target + " is found at index " + recursive_answer + " by using recursive method");
 
 
     }
@@ -27,6 +27,7 @@ public class BinarySearch {
     static int[] arrayInput(int size) {
         int[] arr = new int[size];
         Scanner scan = new Scanner(System.in);
+        scan.close();
         System.out.println("Enter the elements of sorted array");
         for (int i = 0; i < size; i++) {
             arr[i] = scan.nextInt();

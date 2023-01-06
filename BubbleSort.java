@@ -1,4 +1,4 @@
-package com.company;
+package algorithms;
 
 import java.util.Scanner;
 
@@ -7,6 +7,7 @@ public class BubbleSort {
         Scanner scan = new Scanner(System.in);
         System.out.print("Enter the size of the array: ");
         int size = scan.nextInt();
+        scan.close();
         int[] arr = arrayInput(size);
         int[] arrBS = bubbleSort(arr, size);
         System.out.println("Array sorted by bubble sort algorithm: ");
@@ -20,6 +21,7 @@ public class BubbleSort {
     static int[] arrayInput(int size) {
         int[] arr = new int[size];
         Scanner scan = new Scanner(System.in);
+        scan.close();
         System.out.println("Enter the elements of array");
         for (int i = 0; i < size; i++) {
             arr[i] = scan.nextInt();

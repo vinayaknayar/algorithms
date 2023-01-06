@@ -1,4 +1,4 @@
-package com.company;
+package algorithms;
 
 import java.util.Scanner;
 
@@ -11,6 +11,7 @@ public class SelectionSort {
         int[] arrSS = selectionSort(arr, size);
         System.out.println("Array sorted by selection sort algorithm: ");
         printArray(arrSS, size);
+        scan.close();
     }
 
     static int[] arrayInput(int size) {
@@ -20,6 +21,8 @@ public class SelectionSort {
         for (int i = 0; i < size; i++) {
             arr[i] = scan.nextInt();
         }
+        
+        scan.close();
 
         return arr;
     }
